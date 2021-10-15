@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <div class="container">
+            <div class="img-display-array">
+                <img id="img-display" src="./img/01.jpg" alt="">
+                <div class="img-content">
+                    <h1 id="img-title">Svezia</h1>
+                    <p id="img-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
+                </div>
+            </div>
+            <div class="image-selector">
+                <div id="img1" class="img-sel img-1">
+                    <button onclick="imguparray()" class="up">^</button>
+                </div>
+                <div id="img2" class="img-sel img-2"></div>
+                <div id="img3" class="img-sel img-3"></div>
+                <div id="img4" class="img-sel img-4"></div>
+                <div id="img5" class="img-sel img-5">
+                    <button onclick="imgdownarray()" class="down">^</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
