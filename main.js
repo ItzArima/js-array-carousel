@@ -13,6 +13,10 @@ function imgup(){
         mainimg.id = ('img-1');
         var active = document.getElementById("img1");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Svezia";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.";
     }
     if (selector == 2){
         var active = document.getElementById("img3");
@@ -21,6 +25,10 @@ function imgup(){
         mainimg.id = ('img-2');
         var active = document.getElementById("img2");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Svizzera";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Lorem ipsum";
     }
     if (selector == 3){
         var active = document.getElementById("img4");
@@ -29,6 +37,10 @@ function imgup(){
         mainimg.id = ('img-3');
         var active = document.getElementById("img3");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Gran Bretagna";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
     }
     if (selector == 4){
         var active = document.getElementById("img5");
@@ -37,6 +49,10 @@ function imgup(){
         mainimg.id = ('img-4');
         var active = document.getElementById("img4");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Germania";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,";
     }
     if (selector == 5){
         var active = document.getElementById("img1");
@@ -45,6 +61,10 @@ function imgup(){
         mainimg.id = ('img-5');
         var active = document.getElementById("img5");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Paradise";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,";
     }
     console.log(active);
 }
@@ -63,6 +83,10 @@ function imgdown(){
         mainimg.id = ('img-1');
         var active = document.getElementById("img1");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Svezia";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.";
     }
     if (selector == 2){
         var active = document.getElementById("img1");
@@ -71,6 +95,10 @@ function imgdown(){
         mainimg.id = ('img-2');
         var active = document.getElementById("img2");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Svizzera";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Lorem ipsum";
     }
     if (selector == 3){
         var active = document.getElementById("img2");
@@ -79,6 +107,10 @@ function imgdown(){
         mainimg.id = ('img-3');
         var active = document.getElementById("img3");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Gran Bretagna";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
     }
     if (selector == 4){
         var active = document.getElementById("img3");
@@ -87,6 +119,10 @@ function imgdown(){
         mainimg.id = ('img-4');
         var active = document.getElementById("img4");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Germania";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,";
     }
     if (selector == 5){
         var active = document.getElementById("img4");
@@ -95,6 +131,10 @@ function imgdown(){
         mainimg.id = ('img-5');
         var active = document.getElementById("img5");
         active.style.border = "2px solid white";
+        var titolo = document.getElementById("img-title");
+        titolo.innerHTML = "Paradise";
+        var testo  = document.getElementById("img-text")
+        testo.innerHTML = "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,";
     }
     console.log(active);
 }
@@ -127,6 +167,14 @@ let i=0;
 
 function imgdownarray()
 {
+    let iup = i+1;
+    if (iup > (items.length-1)){
+        iup = 0;
+    }
+    console.log(iup);
+    var activearray = document.getElementsByClassName("img-sel");
+    activearray[i].style.border = "0";
+    activearray[iup].style.border = "2px solid white";
     if (i > (items.length-2)){
         i=0;
     }
@@ -146,6 +194,15 @@ function imgdownarray()
 
 function imguparray()
 {
+    let iup = i-1;
+    if (iup < 0){
+        iup = 4;
+    }
+    console.log(iup);
+    var activearray = document.getElementsByClassName("img-sel");
+    activearray[i].style.border = "0";
+    activearray[iup].style.border = "2px solid white";
+
     if (i == 0 ){
         i=4;
     }
@@ -160,5 +217,5 @@ function imguparray()
     testo.innerHTML = text[i];
     console.log(i);
     console.log(title[i]);
-    console.log(text[i]);
+
 }

@@ -129,3 +129,17 @@
     right: -469px;
     color: white;
 }
+
+.img-sel:first-of-type{
+    border: 2px solid white;
+}
+
+.img-content-noarr {
+    height: 150px;
+    position: relative;
+    z-index: 1;
+    width: 56%;
+    top: 79%;
+    right: -469px;
+    color: white;
+}    
